@@ -17,7 +17,7 @@ const SearchFeed = () => {
     <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
       <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "#000" }}>
         Search Result for :{" "}
-        <span style={{ color: "#007070" }}>{searchTerm}</span> videos
+        <span style={{ color: "#007070" }}>{searchTerm}</span>
       </Typography>
 
       <Videos videos={videos} />
