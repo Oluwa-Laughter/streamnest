@@ -36,7 +36,7 @@ const Feed = () => {
           variant="body2"
           sx={{
             mt: 1.5,
-            fontSize: "1.2rem",
+            fontSize: "1.4rem",
             color: "#007070",
           }}
         >

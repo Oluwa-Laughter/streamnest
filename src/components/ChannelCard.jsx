@@ -44,6 +44,7 @@ const ChannelCard = ({ channelDetail, marginTop, boxShadow }) => {
             color="#007070"
             fontSize="2.6rem"
             fontWeight="bold"
+            textAlign="center"
           >
             {channelDetail?.snippet?.title}
             <CheckCircle
