@@ -1,8 +1,19 @@
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import SideBar from "./SideBar";
+import { SideBar, Videos } from "./";
+
+import { fetchFromApi } from "../utils/fetchFromApi";
 
 const Feed = () => {
+  const [selectedCategory, setSelectedCategory] = useState("New");
+
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    );
+  }, [selectedCategory]);
   return (
     <Stack
       sx={{
@@ -16,17 +27,33 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <SideBar />
+        <SideBar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <Typography
           className="copyright"
           variant="body2"
           sx={{
             mt: 1.5,
-            color: "#fff",
+            color: "#007070",
           }}
         >
           Copyright {new Date().getFullYear()} Stream Nest
         </Typography>
+      </Box>
+
+      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          mb={2}
+          sx={{ color: "#000" }}
+        >
+          {selectedCategory} <span style={{ color: "#007070" }}>Videos</span>
+        </Typography>
+
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );

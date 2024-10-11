@@ -1,10 +1,7 @@
 import { Stack } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
-
 import { categories } from "../utils/constants";
 
-const SideBar = () => {
-  const selectedCategoriy = "New";
+const SideBar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
       direction="row"
@@ -17,14 +14,28 @@ const SideBar = () => {
       {categories.map((category) => (
         <button
           className="category-btn"
+          onClick={() => setSelectedCategory(category.name)}
           style={{
-            background: category.name === selectedCategoriy && "#007070",
+            background: category.name === selectedCategory && "#007070",
             color: "#fff",
           }}
           key={category.name}
         >
-          <span>{category.icon}</span>
-          <span>{category.name}</span>
+          <span
+            style={{
+              color: category.name === selectedCategory ? "#fff" : "#007070",
+              marginRight: "1.5rem",
+            }}
+          >
+            {category.icon}
+          </span>
+          <span
+            style={{
+              color: category.name === selectedCategory ? "#fff" : "#007070",
+            }}
+          >
+            {category.name}
+          </span>
         </button>
       ))}
     </Stack>
