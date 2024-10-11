@@ -6,6 +6,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory }) => {
     <Stack
       direction="row"
       sx={{
+        width: { sx: "auto", md: "25rem" },
         overflowY: "auto",
         height: { sx: "auto", md: "95%" },
         flexDirection: { md: "column" },
@@ -24,7 +25,6 @@ const SideBar = ({ selectedCategory, setSelectedCategory }) => {
           <span
             style={{
               color: category.name === selectedCategory ? "#fff" : "#007070",
-              marginRight: "1.5rem",
             }}
           >
             {category.icon}

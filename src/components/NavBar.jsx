@@ -7,15 +7,15 @@ const NavBar = () => {
     <Stack
       direction="row"
       alignItems="center"
-      p={3}
+      p={2}
       sx={{
         position: "sticky",
-        top: 0,
         background: "#f5f5f5",
+        top: 0,
         justifyContent: "space-between",
       }}
     >
-      <Link to="/home">
+      <Link to="/">
         <img src="/images/streamnest-Logo.png" alt="logo" className="logo" />
       </Link>
 

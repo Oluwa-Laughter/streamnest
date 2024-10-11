@@ -14,7 +14,7 @@ export default function App() {
       <Box sx={{ background: "#f5f5f5" }}>
         <NavBar />
         <Routes>
-          <Route path="/feed" exact element={<Feed />} />
+          <Route path="/" exact element={<Feed />} />
           <Route path="/video/:id" element={<VideoDetails />} />
           <Route path="/channel/:id" element={<ChannelDetails />} />
           <Route path="/search/:id" element={<SearchFeed />} />

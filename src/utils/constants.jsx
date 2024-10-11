@@ -17,12 +17,14 @@ export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
-  { name: "Web3Bridge", icon: <SchoolIcon /> },
+  { name: "Web3bridge", icon: <SchoolIcon /> },
+  { name: "JS Mastery", icon: <SchoolIcon /> },
+
   { name: "Javascript", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
   { name: "Typescirpt", icon: <CodeIcon /> },
   { name: "NextJS", icon: <CodeIcon /> },
-  { name: "Web 3.0", icon: <LanguageIcon /> },
+  { name: "Web3.0", icon: <LanguageIcon /> },
   { name: "Education", icon: <SchoolIcon /> },
   { name: "Podcast", icon: <GraphicEqIcon /> },
   { name: "Music", icon: <MusicNoteIcon /> },
@@ -37,11 +39,11 @@ export const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
-export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
+export const demoThumbnailUrl = "/images/thumbnail.png";
+export const demoChannelUrl = "/channel/UCrXJHMI98Y3LI9ljrmEeY3g";
 export const demoVideoUrl = "/video/GDa8kZLNhJ4";
-export const demoChannelTitle = "JavaScript Mastery";
+export const demoChannelTitle = "Stream Nest";
 export const demoVideoTitle =
-  "Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI";
+  "Learning ReactJS - A Complete Web Developer Course";
 export const demoProfilePicture =
   "http://dergipark.org.tr/assets/app/images/buddy_sample.png";
