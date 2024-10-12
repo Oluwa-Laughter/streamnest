@@ -15,48 +15,52 @@ const Feed = () => {
     );
   }, [selectedCategory]);
   return (
-    <Stack
-      sx={{
-        flexDirection: { sx: "column", md: "row" },
-      }}
-    >
-      <Box
+    <>
+      <Stack
         sx={{
-          height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid #007372",
-          px: { sx: 0, md: 2 },
+          flexDirection: { sx: "column", md: "row" },
         }}
       >
-        <SideBar
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
-        <Typography
-          className="copyright"
-          variant="body2"
+        <Box
           sx={{
-            mt: 1.5,
-            fontSize: "1.4rem",
-            color: "#007070",
+            height: { sx: "auto", md: "92vh" },
+            borderRight: "1px solid #007372",
+            px: { sx: 0, md: 2 },
           }}
         >
-          Copyright {new Date().getFullYear()} Stream Nest
-        </Typography>
-      </Box>
+          <SideBar
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          mb={2}
-          sx={{ color: "#000" }}
-        >
-          {selectedCategory} <span style={{ color: "#007070" }}>Videos</span>
-        </Typography>
+        <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            mb={2}
+            sx={{ color: "#000" }}
+          >
+            {selectedCategory} <span style={{ color: "#007070" }}>Videos</span>
+          </Typography>
 
-        <Videos videos={videos} />
-      </Box>
-    </Stack>
+          <Videos videos={videos} />
+        </Box>
+      </Stack>
+
+      <Typography
+        className="copyright"
+        variant="body2"
+        sx={{
+          mt: 1.5,
+          fontSize: "1.4rem",
+          color: "#007070",
+          textAlign: "center",
+        }}
+      >
+        Copyright {new Date().getFullYear()} Stream Nest
+      </Typography>
+    </>
   );
 };
 

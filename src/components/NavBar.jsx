@@ -15,7 +15,7 @@ const NavBar = () => {
         justifyContent: "space-between",
       }}
     >
-      <Link to="/">
+      <Link to="/feed">
         <img src="/images/streamnest-Logo.png" alt="logo" className="logo" />
       </Link>
 
