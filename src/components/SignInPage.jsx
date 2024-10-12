@@ -13,7 +13,6 @@ const SignInPage = () => {
     if (password === confirmPassword) {
       navigate("/feed");
     } else {
-      // Display error message
       alert("Passwords do not match");
     }
   };
@@ -61,20 +60,24 @@ const SignInPage = () => {
       >
         <Typography
           variant="h1"
-          fontWeight="bold"
-          fontSize="3.6rem"
+          fontWeight="normal"
+          fontSize="3rem"
           textAlign="center"
-          alignSelf="center"
         >
-          Welcome back to <span style={{ color: "#075656" }}>StreamNest</span>
+          Welcome back to{" "}
+          <span
+            style={{ color: "#075656", fontWeight: "bold", fontSize: "4rem" }}
+          >
+            StreamNest
+          </span>
         </Typography>
         <Typography
-          variant="h4"
+          variant="p"
           fontWeight="bold"
           fontSize="2rem"
           sx={{ color: "#075656" }}
         >
-          Sign In
+          Sign in to your account
         </Typography>
         <form
           onSubmit={handleSignIn}
