@@ -15,9 +15,8 @@ export default function App() {
     <BrowserRouter>
       <Box sx={{ background: "#f5f5f5" }}>
         <Routes>
-          <Route path="/" element={<SignInPage />} />
           <Route element={<Layout />}>
-            <Route path="/feed" element={<Feed />} />
+            <Route path="/" element={<Feed />} />
             <Route path="/video/:id" element={<VideoDetails />} />
             <Route path="/channel/:id" element={<ChannelDetails />} />
             <Route path="/search/:searchTerm" element={<SearchFeed />} />
